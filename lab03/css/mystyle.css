@@ -1,0 +1,31 @@
+body{
+    font-family: arial;
+    background-color: rgb(185, 179, 175);
+}
+
+h1{
+    color: rgb(255, 255, 255);
+}
+div.img
+{
+  margin: 2px;
+  border: 3px solid #f75353;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+}	
+div.img img
+{
+  display: inline;
+  margin: 3px;
+  border: 1px solid #ffffff;
+}
+div.img a:hover img {border: 3px solid #c574da;}
+div.desc
+{
+  text-align: center;
+  font-weight: normal;
+  width: 220px;
+  margin: 2px;
+}
