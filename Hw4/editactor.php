@@ -1,7 +1,6 @@
 <?php
 require_once("dbconfig.php");
 
-// ตรวจสอบว่ามีการ post มาจากฟอร์ม ถึงจะลบ
 if ($_POST){
     $id = $_POST['id'];
     $doc_num = $_POST['doc_num'];
@@ -51,7 +50,7 @@ if ($_POST){
 
 <body>
     <div class="container">
-        <h1>Edit an actor</h1>
+        <h1>Edit Order</h1>
         <form action="editactor.php" method="post">
             <div class="form-group">
                 <label for="doc_num">Order</label>

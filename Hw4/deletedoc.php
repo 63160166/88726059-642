@@ -36,7 +36,7 @@ if ($_POST){
 
 <body>
     <div class="container">
-        <h1>Delete an actor</h1>
+        <h1>Delete Order</h1>
         <table class="table table-hover">
             <tr>
                 <th style='width:120px'>Order</th>
