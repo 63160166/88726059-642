@@ -18,7 +18,7 @@ if ($_POST){
 <html lang="en">
 
 <head>
-    <title>php db demo</title>
+    <title>New Staff</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -26,19 +26,20 @@ if ($_POST){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style = "background-color:#D8BFD8">
     <div class="container">
         <h1>Add Employee</h1>
         <form action="newstaff.php" method="post">
             <div class="form-group">
                 <label for="stf_code">Employee</label>
-                <input type="text" class="form-control" name="stf_code" id="stf_code">
+                <input type="text" class="form-control" name="stf_code" id="stf_code" style = "background-color:#DDA0DD">
             </div>
             <div class="form-group">
                 <label for="stf_name">Employee Name</label>
-                <input type="text" class="form-control" name="stf_name" id="stf_name">
+                <input type="text" class="form-control" name="stf_name" id="stf_name" style = "background-color:#DDA0DD">
             </div>
-            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-warning" onclick="history.back();" style = "background-color:#FFC0CB">Back</button>
+            <button type="submit" class="btn btn-success" style = "background-color:#20B2AA">Save</button>
         </form>
 </body>
 

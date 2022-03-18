@@ -26,7 +26,7 @@ if ($_POST){
 <html lang="en">
 
 <head>
-    <title>php db demo</title>
+    <title>Delete Employee</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -34,7 +34,7 @@ if ($_POST){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style = "background-color:#D8BFD8">
     <div class="container">
         <h1>Delete Employee</h1>
         <table class="table table-hover">
@@ -51,8 +51,8 @@ if ($_POST){
         </table>
         <form action="deletestaff.php" method="post">
             <input type="hidden" name="id" value="<?php echo $row->id;?>">
-            <input type="submit" value="Confirm delete" class="btn btn-danger">
-            <button type="button" class="btn btn-warning" onClick="window.history.back()">Cancel Delete</button>
+            <input type="submit" value="Confirm delete" class="btn btn-danger" style = "background-color:#F08080" >
+            <button type="button" class="btn btn-warning" onClick="window.history.back()" style = "background-color:#20B2AA">Cancel Delete</button>
         </form>
 </body>
 
