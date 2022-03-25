@@ -1,7 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['loggined'])){
+    header('Location: login.php');
+}
 require_once("dbconfig.php");
-
-
 if ($_POST){
     $doc_num = $_POST['doc_num'];
     $doc_title = $_POST['doc_title'];
@@ -32,6 +35,8 @@ if ($_POST){
  
     header("location: documents.php");
 }
+else{
+    echo "<div align = center><h1><span class='glyphicon glyphicon-heart-empty'> Welcome ".$_SESSION['stf_name'] . "</span></h1></div>";
 ?>
 <!DOCTYPE html>
 <html lang="en">

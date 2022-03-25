@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['loggined'])){
+    header('Location: login.php');
+}else{
+    echo "<div align = center><h1><span class='glyphicon glyphicon-heart-empty'> Welcome ".$_SESSION['stf_name'] . "</span></h1></div>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +22,7 @@
 
 <body style = "background-color:#D8BFD8">
     <div align =left class="container">
-    <h1 align =left>Search for Order
+    <h1 align =left>Search for Order |
         <a href='documents.php'><span class='glyphicon glyphicon-circle-arrow-left' style = "color:#FF00FF"></span></a></h1>
         <form align =left action="#" method="post">
             <input type="text" name="kw" placeholder="Enter document name" value="" size=50 style = "background-color:#FFC0CB">

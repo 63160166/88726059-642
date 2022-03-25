@@ -1,5 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['loggined'])){
+    header('Location: login.php');
+}
 require_once("dbconfig.php");
+
 if ($_POST){
     $id = $_POST['id'];
     $sql = "DELETE 
@@ -16,7 +22,7 @@ if ($_POST){
     $stmt->bind_param("i", $id);
     $stmt->execute();
     header("location: documents.php");
-} else {
+}else {
     $id = $_GET['id'];
     $sql = "SELECT *
             FROM documents
@@ -27,6 +33,7 @@ if ($_POST){
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_object();
+    echo "<div align = center><h1><span class='glyphicon glyphicon-heart-empty'> Welcome ".$_SESSION['stf_name'] . "</span></h1></div>";
 }
 ?>
 <!DOCTYPE html>

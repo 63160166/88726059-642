@@ -1,6 +1,5 @@
 <?php
 require_once("dbconfig.php");
-
 if ($_POST){
     // echo "<pre>";
     // print_r($_POST);
@@ -50,6 +49,7 @@ if ($_POST){
     $result = $stmt->get_result();
 }
 ?>
+
 
 <form action="addstafftodocument.php" method="post">
     <input type="hidden" name="id" value="<?php echo $doc_id; ?>">

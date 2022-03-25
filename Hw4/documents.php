@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['loggined'])){
+    header('Location: login.php');
+}else{
+    echo "<div align = center><h1><span class='glyphicon glyphicon-heart-empty'> Welcome ".$_SESSION['stf_name'] . "</span></h1></div>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +22,10 @@
 
 <body style = "background-color:#D8BFD8">
     <div class="container">
-        <h1>Orders | <a href='newactor.php'><span class='glyphicon glyphicon-plus' style = "color:#FF1493"></span></a>
+        <h1>Orders | <a href='newactor.php'><span class='glyphicon glyphicon-plus' style = "color:#FF1493"></span></a> 
         |<a href='staff.php?id=$row->id'><span class='glyphicon glyphicon-user' style = "color:#FF69B4"></span></a>
-        |<a href='selectdocument.php'><span class='glyphicon glyphicon-search'style = "color:#C71585"></span></a></h1>
+        |<a href='selectdocument.php'><span class='glyphicon glyphicon-search'style = "color:#C71585"></span></a>
+        <a class="pull-right" href='logout.php'><span class='glyphicon glyphicon-off'style = "color:#C71585"></span></a></h1>
         <form action="#" method="post">
             <input type="text" name="kw" placeholder="Enter Order, Order name" value=""  style = "background-color:#FFC0CB">
             <input type="submit" style = "background-color:#9370DB">
